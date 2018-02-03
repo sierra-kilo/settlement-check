@@ -2,10 +2,10 @@
 
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 
 app.get('/', function (req, res) {
-  res.send('hello world')
+  res.send('Hello World')
 });
 
 app.listen(PORT, function() {
