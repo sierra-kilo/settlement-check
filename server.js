@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+var users = require('./routes/users');
+app.use('/users', users);
+
 app.get('/', function (req, res) {
   res.send('Hello World')
 });
